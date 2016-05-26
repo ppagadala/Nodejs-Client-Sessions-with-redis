@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/public/stylesheets/style.css"/>
+  </head>
+  <body>
+    <% include menu %>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% if(locals.user) { %>
+    <h1>User Information</h1>  
+    <p>Id: <%= user.id %></p>  
+    <p>Username: <%= user.name %></p>
+    <p>Password: <%= user.pass %></p>  
+    <p>Age: <%= user.age %></p>
+    <% } %>  
+  </body>
+</html>
